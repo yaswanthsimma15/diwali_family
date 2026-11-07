@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff8ed;
+    color: #3b1b0c;
+}
+
+
+/* Navigation */
+header {
+    background: #5c1600;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+}
+
+.logo {
+    color: #ffcf40;
+    font-size: 25px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffc107;
+}
+
+
+/* Home Section */
+.hero {
+    min-height: 90vh;
+
+    background:
+    linear-gradient(rgba(50, 10, 0, 0.65),
+    rgba(50, 10, 0, 0.65)),
+    url("IMG_20261101_190745.jpg.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    color: #ffcf40;
+    animation: glow 2s infinite alternate;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: #ffb300;
+    color: #4b1600;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.floating-diya {
+    position: absolute;
+    bottom: 30px;
+    font-size: 55px;
+    animation: float 3s infinite ease-in-out;
+}
+
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px orange;
+    }
+
+    to {
+        text-shadow: 0 0 35px yellow,
+                     0 0 60px orange;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* Common Sections */
+.section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 35px;
+    color: #a52a00;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+}
+
+
+/* About */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    text-align: left;
+}
+
+.about-container img {
+    width: 45%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    color: #d35400;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+
+/* Celebrations */
+.celebrations {
+    background: #fff0d5;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 25px rgba(255,120,0,0.3);
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #c03900;
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery figure {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.gallery figure:hover {
+    transform: scale(1.04);
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 15px;
+    font-weight: bold;
+    color: #a52a00;
+}
+
+
+/* Video */
+.video-section {
+    background: #fff0d5;
+}
+
+video {
+    width: 75%;
+    max-height: 420px;
+    border-radius: 15px;
+    margin-top: 25px;
+    background: black;
+}
+
+
+/* Audio */
+.audio-section audio {
+    width: 70%;
+    margin-top: 20px;
+}
+
+
+/* Safety */
+.safety-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.safety-card {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #ff9800;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.safety-card:hover {
+    background: #fff0d5;
+    transform: translateX(8px);
+}
+
+.safety-card h3 {
+    color: #c03900;
+    margin-bottom: 10px;
+}
+
+
+/* Contact */
+.contact {
+    background: #fff0d5;
+}
+
+form {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e0a050;
+    border-radius: 10px;
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid #d35400;
+}
+
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+button {
+    padding: 15px;
+    background: #a52a00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff9800;
+}
+
+
+/* Footer */
+footer {
+    background: #4b1600;
+    color: white;
+    padding: 35px;
+    text-align: center;
+    line-height: 2;
+}
+
+footer h2 {
+    color: #ffcf40;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-container img {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+    .card-container,
+    .gallery,
+    .safety-container {
+        grid-template-columns: 1fr;
+    }
+
+    video,
+    .audio-section audio {
+        width: 100%;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+
+}
